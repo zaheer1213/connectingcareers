@@ -1,0 +1,243 @@
+.connecting-careers-final-logo-1 {
+    width: 194px;
+    height: 91.9px;
+    object-fit: cover;
+}
+
+.supporting-text {
+    width: 100%;
+    line-height: 40px;
+    font-weight: 500;
+}
+
+.logo-and-supporting-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.heading,
+.text {
+    position: relative;
+}
+
+.heading {
+    line-height: 26.67px;
+    font-weight: 600;
+}
+
+.text {
+    line-height: 32px;
+    font-weight: 500;
+}
+
+.button-base {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.button1,
+.footer-link,
+.footer-link1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.footer-link,
+.footer-link1 {
+    align-items: center;
+}
+
+.footer-link1 {
+    font-family: var(--bold-16);
+}
+
+.text3 {
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.badge-base {
+    border-radius: 21.33px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+}
+
+.badge,
+.footer-link2,
+.footer-link3 {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    font-family: 'Inter Semi Bold', sans-serif;
+}
+
+.footer-link2,
+.footer-link3 {
+    align-items: center;
+}
+
+.footer-link2 {
+    display: flex;
+    gap: 5px;
+    font-family: 'Bold 16';
+}
+
+.footer-link3 {
+    display: none;
+}
+
+.footer-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 16px;
+    color: #ccc;
+    font-family: 'Inter Semi Bold', sans-serif;
+}
+
+.content2,
+.footer-links,
+.footer-links-column,
+.links {
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.footer-links-column {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.content2,
+.links {
+    flex-direction: row;
+}
+
+.links {
+    width: 100%;
+    align-items: flex-start;
+    gap: 20px;
+    font-size: 16px;
+    color: #666;
+  
+}
+
+.content2 {
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.container,
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.section {
+    align-items: center;
+    justify-content: flex-start;
+    padding: 85px 0 64px;
+    text-align: left;
+    font-size: 21px;
+    color: white;
+    background: black;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .logo-and-supporting-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .connecting-careers-final-logo-1 {
+        width: 150px;
+        height: auto;
+    }
+
+    .supporting-text {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .links {
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 210px;
+    }
+
+    .footer-links-column {
+        width: 100%;
+    }
+
+    .footer-link3 {
+        display: flex;
+    }
+
+    .footer-link1,
+    .footer-link2 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 18px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .footer-links {
+        gap: 5px;
+    }
+
+    .button-base {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-link,
+    .footer-link1 {
+        font-size: 12px;
+    }
+
+    .connecting-careers-final-logo-1 {
+        width: 120px;
+    }
+}

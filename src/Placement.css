@@ -1,0 +1,87 @@
+.palcemet-conatiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.hading {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.building-strong-connections,
+.placement-partners {
+    align-self: stretch;
+    position: relative;
+    line-height: 40px;
+    text-align: center;
+}
+
+.frame-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 15px;
+    gap: 20px;
+    /* Increased space between the logos */
+}
+
+.frame-wrapper .row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.esy-ev-social-media-2-wrapper {
+    background-color: #fff;
+    height: 100px;
+    /* Increased height of each logo container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    /* Increased padding around each logo */
+    box-sizing: border-box;
+    max-width: 150px;
+    /* Increased max-width for each logo container */
+    flex: 1;
+}
+
+.esy-ev-social-media-2-wrapper img {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .frame-wrapper {
+        padding: 0 10px;
+    }
+
+    .esy-ev-social-media-2-wrapper {
+        max-width: 120px;
+        /* Adjusted width for smaller screens */
+        height: 80px;
+        /* Adjusted height for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .frame-wrapper {
+        padding: 0 5px;
+    }
+
+    .esy-ev-social-media-2-wrapper {
+        max-width: 100px;
+        /* Adjusted width for extra small screens */
+        height: 70px;
+        /* Adjusted height for extra small screens */
+    }
+}

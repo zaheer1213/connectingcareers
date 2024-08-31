@@ -1,0 +1,49 @@
+.headingmodle {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid red;
+}
+
+.customeline {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.number {
+    background: black;
+    color: white;
+    padding: 10px;
+}
+
+.cutomerow {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    width: 336px;
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.5s ease-in-out;
+    /* Slow down the movement */
+}
+
+.cutomerow:hover {
+    background: red;
+    color: white;
+    transform: translateX(-50px);
+}
+
+/* Hide the .number when .cutomerow is hovered */
+.customeline:hover .number {
+    opacity: 0;
+    visibility: hidden;
+}

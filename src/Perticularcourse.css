@@ -1,0 +1,96 @@
+.particularcoruse {
+    position: relative;
+    padding-bottom: 100px;
+    /* Space to accommodate the overlapping cards-div */
+    background: #FEF4F4;
+    z-index: 1;
+}
+
+.firstcol {
+    padding: 20px;
+}
+
+.firstcol h2 {
+    font-weight: bold;
+}
+
+.datalist {
+    list-style: none;
+    padding: 0;
+}
+
+.datalist li {
+    display: flex;
+    align-items: center;
+}
+
+.list-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.apply-btn {
+    background: red;
+    border: red;
+    height: 48px;
+    color: white;
+    font-weight: bold;
+}
+
+.hedaingd {
+    font-weight: bold;
+}
+
+.cutome-cards {
+    height: 146px;
+    width: 300px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: white;
+}
+
+.cards-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards-div {
+    position: relative;
+    top: -60px;
+    /* Adjust this value to control how much overlaps */
+    margin-bottom: -40px;
+    /* Same value as top to keep the flow correct */
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .firstcol h2 {
+        font-size: 1.5rem;
+    }
+
+    .firstcol p {
+        font-size: 0.9rem;
+    }
+
+    .apply-btn {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .datalist li {
+        font-size: 0.9rem;
+    }
+
+    .list-icon {
+        width: 15px;
+        height: 15px;
+    }
+    .cards-div {
+        top: -25px; /* Adjust for smaller screens */
+        margin-bottom: -25px;
+        margin-left: 30px;
+    }
+}

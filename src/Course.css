@@ -1,0 +1,199 @@
+#app {
+    height: 100%;
+}
+
+.course-container {
+    min-height: 70vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.firstheading {
+    color: #666666;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
+    /* Add padding to make room for pagination */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-card {
+    position: relative;
+    /* Ensure the card is positioned relative to contain the image */
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: start;
+    width: 100%;
+    max-width: 400px;
+    height: 380px !important;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.course-normal-heading {
+    font-size: 16px;
+    color: #333;
+}
+
+.course-big-heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    margin: 20px 0;
+    text-align: start;
+}
+
+.course-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.course-button {
+    background-color: black !important;
+    border: none !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px !important;
+    cursor: pointer;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    overflow: hidden;
+}
+
+.apply-now-link {
+    color: red;
+    /* Sets the text color to red */
+    text-decoration: none;
+    /* Removes the underline */
+    font-weight: bold;
+    /* (Optional) Makes the text bold for emphasis */
+}
+
+.apply-now-link:hover {
+    text-decoration: underline;
+    /* (Optional) Adds underline on hover */
+}
+
+.course-button .original-price {
+    text-decoration: line-through;
+    margin-right: 5px;
+    /* Add some space between the original price and the discounted price */
+}
+
+
+.course-button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for pagination bullets */
+.swiper-pagination {
+    position: relative;
+    bottom: 0;
+    /* Position the pagination at the bottom */
+    margin-top: 10px;
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    background-color: red;
+    /* Bullet color */
+    opacity: 1;
+    /* Full opacity */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: black;
+    /* Active bullet color */
+}
+
+.course-card .hover-image {
+    position: absolute;
+    top: 10px;
+    /* Adjust as needed */
+    right: 10px;
+    /* Adjust as needed */
+    width: 60px;
+    /* Adjust as needed */
+    height: 60px;
+    /* Adjust as needed */
+    opacity: 0;
+    /* Initially hide the image */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.course-card:hover .course-button {
+    background-color: red !important;
+}
+
+.course-card:hover .hover-image {
+    opacity: 1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Show the image on hover */
+}
+
+@media (max-width: 767.98px) {
+    .course-card {
+        height: 460px !important;
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    /* Center the buttons vertically */
+    transform: translateY(-50%);
+    z-index: 10;
+    color: #333;
+    cursor: pointer;
+    font-size: 24px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-prev {
+    left: 10px;
+    /* Position the previous button to the left */
+}
+
+.swiper-button-next {
+    right: 10px;
+    /* Position the next button to the right */
+}
+
+/* Add some hover effects for better UX */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: #f0f0f0;
+}
+
+.button-container {
+    position: absolute;
+    left: 43%;
+    bottom: 0;
+    overflow: hidden;
+}

@@ -1,0 +1,100 @@
+/* General styles for Footer component */
+.footer-text {
+    flex: 1;
+    line-height: 32px;
+    color: #ccc;
+    /* Adjusted to a lighter color for better visibility on dark background */
+}
+
+.social-icon {
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+}
+
+.social-icons {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.container1,
+.content3,
+.section1,
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.content3 {
+    align-self: stretch;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.container1,
+.section1 {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 var(--padding-23xl-7);
+}
+
+.section1 {
+    align-self: stretch;
+    background-color: black;
+    align-items: center;
+    padding: 64px 0;
+    text-align: left;
+    font-size: 21.3px;
+    color: gray;
+    font-family: var(--inter-semi-bold-16);
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .content3 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-icons {
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .footer-text {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .section1 {
+        padding: 40px 0;
+        font-size: 18px;
+    }
+
+    .social-icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-text {
+        font-size: 14px;
+    }
+
+    .section1 {
+        padding: 20px 0;
+        font-size: 16px;
+    }
+
+    .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+}

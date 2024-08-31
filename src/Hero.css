@@ -1,0 +1,148 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px 0;
+    background-image: url('../public/image-14@2x copy.png');
+    /* Set the background image */
+    background-size: cover;
+    /* Make sure the image covers the entire container */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+}
+
+.custom-btn {
+    background: #ec1f28 !important;
+    border: #ec1f28 !important;
+    font-weight: bold !important;
+    height: 50px;
+    width: 200px;
+}
+
+.transform-your-career1 {
+    letter-spacing: -2px;
+    line-height: 130%;
+    font-weight: 600;
+    font-size: 50px;
+    text-align: center;
+    color: var(--color-gray-200);
+    margin-bottom: 20px;
+}
+
+.who-can-parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* Space between text and line */
+}
+
+.who-can,
+.influencers {
+    font-size: 45px;
+    line-height: 75px;
+}
+
+.frame-item {
+    width: 2px;
+    /* Vertical line thickness */
+    height: 75px;
+    /* Height of the vertical line */
+    background-color: var(--black);
+    /* Color of the vertical line */
+}
+
+.influencers {
+    color: #ec1f28;
+}
+
+.cutome-btn {
+    background-color: #ec1f28 !important;
+    border: #ec1f28 !important;
+    width: 204px;
+    height: 58px;
+    font-size: 18px;
+}
+
+.image {
+    width: 600px !important;
+    height: 300px;
+    background-color: #1f1f1f;
+    /* You can choose the background color or use an image */
+    border-radius: 20px;
+    /* Adjust this value for the desired border-radius */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* To position elements inside the image */
+    margin: 0 auto;
+    /* To center the .image container */
+}
+
+.video {
+    width: 80px;
+    /* Adjust the size of the video container if needed */
+    height: 80px;
+    /* Adjust the size of the video container if needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-icon {
+    width: 100px;
+    /* Adjust the size of the play icon */
+    height: 100px;
+    /* Adjust the size of the play icon */
+}
+
+.ccvideo{
+    width: 600px;
+}
+
+@media (max-width: 768px) {
+    .image {
+        width: 300px !important;
+        height: 200px;
+        /* Allows the image to be responsive on smaller screens */
+        border-radius: 10px;
+        /* Adjust for smaller screens */
+    }
+
+    .video {
+        width: 60px;
+        height: 60px;
+    }
+
+    .play-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .ccvideo{
+        width: 300px;
+    }
+    .custom-btn{
+        width: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .transform-your-career1 {
+        font-size: 36px;
+    }
+
+    .who-can,
+    .influencers {
+        font-size: 20px;
+    }
+
+    .frame-item {
+        height: 50px;
+        /* Adjust height of the vertical line for smaller screens */
+    }
+}

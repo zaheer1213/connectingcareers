@@ -1,0 +1,167 @@
+.aboutusbg {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: url('../public/aboutusimg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+    min-height: 700px;
+}
+
+.aboutheading {
+    color: white;
+    text-align: center;
+}
+
+.about-cards {
+    padding: 20px;
+}
+
+.about-cards-row {
+    display: flex;
+    justify-content: space-between;
+    /* Ensures equal spacing between columns */
+    align-items: center;
+    flex-wrap: wrap;
+    /* Ensures that if the screen is too small, the columns will wrap to the next line */
+}
+
+.about-cards-row .col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Centers text within the columns */
+}
+
+.about-cards-row img {
+    max-width: 100%;
+    height: auto;
+    /* Ensures the image is responsive */
+    object-fit: contain;
+    /* Adjusts the image to fit within its container without distortion */
+}
+
+.aboutus-paerticular-cards {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.aboutimg {
+    height: 50px;
+    width: 50px;
+}
+
+.founder-cards {
+    display: flex;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    background: white;
+    border-radius: 50%;
+
+}
+
+.founder-socoil {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.founder-cards-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FEF4F4;
+    padding: 20px;
+    flex-direction: row;
+}
+
+.directorimges {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+.long-heading {
+    background: black;
+    color: white;
+    padding: 10px;
+    width: 300px;
+}
+
+.aboutend-section {
+    padding: 20px;
+    min-height: 60vh;
+    overflow: hidden;
+}
+
+.section-img {
+    height: auto;
+    width: 100%;
+}
+
+.section-img img {
+    height: 100%;
+    width: 900px;
+    object-fit: cover;
+}
+
+.hedingsd {
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.aboutusfreme-img {
+    height: auto;
+    width: 100%;
+}
+
+.aboutusfreme-img img {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .aboutend-section {
+        flex-direction: column;
+        /* Stack content vertically on smaller screens */
+        align-items: flex-start;
+        /* Align content to the start */
+    }
+
+    .aboutend-section .row {
+        flex-direction: column;
+        /* Stack columns vertically */
+        align-items: flex-start;
+        /* Align columns to the start */
+    }
+
+    .aboutend-section .col-md-4,
+    .aboutend-section .col-md-6 {
+        max-width: 100%;
+        margin-bottom: 20px;
+        /* Add space between stacked columns */
+    }
+
+    .section-img img {
+        width: 100%;
+        /* Make the image responsive */
+        height: auto;
+    }
+
+    .hedingsd {
+        text-align: center;
+        /* Center the heading on mobile */
+        width: 100%;
+    }
+
+    p {
+        font-size: 14px;
+        /* Adjust font size for readability on smaller screens */
+    }
+}

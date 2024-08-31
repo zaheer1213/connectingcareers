@@ -1,0 +1,82 @@
+.custom-card-why {
+    width: 100%;
+    border-radius: 18px !important;
+    background-color: white !important;
+    color: black !important;
+    transition: transform 0.3s ease;
+    font-size: 13px;
+    padding: 15px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-heading h1 {
+    font-size: 42px;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+}
+
+.why-heading p {
+    font-style: italic;
+    color: white;
+}
+
+.title {
+    font-weight: bold !important;
+}
+
+.cardb {
+    padding: 0px;
+}
+
+.custom-card-why:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-why {
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    height: 100px !important;
+    width: 100px !important;
+    object-fit: cover;
+}
+
+.why-choose-us-content {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-choose-us-main {
+    background-color: white;
+}
+
+/* Add this style to center the last card */
+.center-last-card {
+    /* margin-left: 300px; */
+}
+
+@media (max-width: 767.98px) {
+
+    /* Adjust the max-width value as needed */
+    .center-last-card {
+        margin-left: 0;
+    }
+
+    .custom-card-why {
+        height: 310px;
+
+    }
+    .title{
+        margin-top: 10px;
+    }
+}
+
+.sectionimg {
+    height: auto;
+    width: 100%;
+}
