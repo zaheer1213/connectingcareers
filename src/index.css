@@ -9,3 +9,6 @@ body {
   background: red !important;
   border: red !important;
 }
+.pointer{
+  cursor: pointer;
+}

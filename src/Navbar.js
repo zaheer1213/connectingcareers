@@ -73,7 +73,9 @@ const Navbar = () => {
           <Col xs={6} md={8} className={`nav-col ${isOpen ? "open" : ""}`}>
             <Nav className="nav-links">
               <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/allcourses" className="active">Courses</Nav.Link>
+              <Nav.Link href="/allcourses" className="active">
+                Courses
+              </Nav.Link>
               <Nav.Link href="/aboutus">About Us</Nav.Link>
               <Nav.Link href="/blogs">Blogs</Nav.Link>
               <Nav.Link href="" onClick={() => handleShow()}>

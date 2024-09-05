@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button, Container, Row } from "react-bootstrap";
 import "./Hero.css";
-import ContactModal from "./ContactModal";
 import Navbar from "./Navbar";
 import Placement from "./Placement";
 import Director from "./Director";

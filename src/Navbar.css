@@ -62,14 +62,14 @@
     }
 
     .nav-links {
+        display: none !important;
         flex-direction: column;
         gap: 10px;
         text-align: center;
-        display: none;
     }
 
     .nav-col.open .nav-links {
-        display: flex;
+        display: flex !important;
         position: absolute;
         top: 70px;
         left: 0;

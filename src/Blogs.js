@@ -87,7 +87,11 @@ const Blogs = () => {
             ))}
           <div className="d-flex justify-content-center py-5">
             <Stack spacing={2}>
-              <Pagination count={pageCount} variant="outlined" shape="rounded" />
+              <Pagination
+                count={pageCount}
+                variant="outlined"
+                shape="rounded"
+              />
             </Stack>
           </div>
         </Row>

@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import { Button, Container, Modal } from "react-bootstrap";
 import "./ContactUs.css";
 import { Pagination, Stack } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPenToSquare, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { AgGridReact } from "ag-grid-react";
 import axios from "axios";
 import { BASEURL } from "../../Comman";
+import Loader from "../../Loader";
 
 const ContactUs = () => {
   const [limit, setLimit] = useState(10);
   const [allConatactus, setAllConatactus] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [show, setShow] = useState(false);
+  const [show1, setShow1] = useState(false);
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [id, setId] = useState(null);
 
   const getAllContact = async () => {
     try {
@@ -79,16 +85,9 @@ const ContactUs = () => {
       cellRenderer: (params) => (
         <>
           <FontAwesomeIcon
-            icon={faPenToSquare}
-            title="Edit"
-            className="pointer"
-            // onClick={() => editService(params.value)}
-          />
-          &nbsp;&nbsp;
-          <FontAwesomeIcon
             icon={faTrashCan}
             title="Delete"
-            // onClick={() => handleOpenDelete(params.value)}
+            onClick={() => handleOpenDelete(params.value)}
             className="pointer"
             style={{ color: "red" }}
           />
@@ -101,14 +100,47 @@ const ContactUs = () => {
     minWidth: 150,
     resizable: true,
   };
+  const handleOpenDelete = (id) => {
+    setId(id);
+    setShow(true);
+    setMessage("Are you sure you want to delete?");
+  };
   const handlePageChange = (event, value) => {
     setPage(value);
+  };
+
+  const handleClose = () => {
+    setShow(false);
+  };
+
+  const handleClose1 = () => {
+    setShow1(false);
+  };
+
+  const handleDelete = async () => {
+    handleClose();
+    setLoading(true);
+    try {
+      const response = await axios.delete(`${BASEURL}/courses/contact/${id}`);
+      setLoading(false);
+      if (response.data) {
+        setMessage("Contact deleted successfully");
+        setShow1(true);
+        getAllContact();
+      }
+    } catch (error) {
+      setShow(false);
+      setMessage("Something went wrong.");
+      setShow1(true);
+      setLoading(false);
+    }
   };
   useEffect(() => {
     getAllContact();
   }, []);
   return (
     <>
+      {loading && <Loader />}
       <Container fluid>
         <Container className="heading-container">
           <div>
@@ -145,6 +177,35 @@ const ContactUs = () => {
           </Stack>
         </div>
       </Container>
+
+      {/* Delete Modal */}
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Alert</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{message}</Modal.Body>
+        <Modal.Footer>
+          <Button style={{ background: "red" }} onClick={handleDelete}>
+            Ok
+          </Button>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      {/* Success Modal */}
+      <Modal show={show1} onHide={handleClose1}>
+        <Modal.Header closeButton>
+          <Modal.Title>Alert</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{message}</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose1}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 };

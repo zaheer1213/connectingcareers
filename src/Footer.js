@@ -29,6 +29,12 @@ const Footer = () => {
                   style={{ fontSize: "30px", color: "white" }}
                 ></i>
               </a>
+              <a href="https://www.youtube.com/@ConnectingCareers">
+                <i
+                  class="fa-brands fa-youtube"
+                  style={{ fontSize: "30px", color: "white" }}
+                ></i>
+              </a>
             </div>
           </div>
         </div>

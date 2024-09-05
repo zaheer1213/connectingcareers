@@ -13,6 +13,7 @@ import AdminLayout from "./Admin/AdminLayout/AdminLayout";
 import ContactUs from "./Admin/ContactUs/ContactUs";
 import AdminBlogs from "./Admin/Blogs/Blogs";
 import Auth from "./Admin/Auth";
+import Addblogs from "./Admin/Blogs/Addblogs";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Route element={<AdminLayout />}>
           <Route path="/admin-contact" element={<ContactUs />} />
           <Route path="/admin-blogs" element={<AdminBlogs />} />
+          <Route path="/admin-addblogs" element={<Addblogs />} />
         </Route>
       </Routes>
     </>
