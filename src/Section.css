@@ -27,11 +27,12 @@
 .heading {
     line-height: 26.67px;
     font-weight: 600;
+    font-size: 16px;
 }
 
 .text {
     line-height: 32px;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 .button-base {
@@ -176,7 +177,7 @@
 @media (max-width: 768px) {
     .logo-and-supporting-text {
         width: 100%;
-        text-align: center;
+        text-align: start;
     }
 
     .connecting-careers-final-logo-1 {

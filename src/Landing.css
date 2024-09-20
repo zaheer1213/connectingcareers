@@ -1,0 +1,140 @@
+.landing-main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+
+.image-container h1 {
+    font-weight: bold;
+}
+
+.full-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 1000px;
+}
+
+.logo-img img {
+    height: 100px;
+    width: 250px;
+}
+
+.feautrescar {
+    padding: 20px;
+    color: white;
+    background: rgb(37, 37, 37);
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    /* Add some space between cards */
+    text-align: center;
+
+}
+
+.custom-container {
+    max-width: 1200px;
+    /* Limit the container width */
+    margin: 0 auto;
+    margin-top: 100px;
+    /* Center the container */
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+
+.column {
+    width: auto;
+    height: 74px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.career-container {
+    background-color: black;
+    color: white;
+}
+
+.career-box {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    /* Light background for the box */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+    border: 1px solid #ddd;
+    /* Optional border */
+    padding: 15px;
+}
+
+.career-box input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.career-box label {
+    font-size: 16px;
+    color: #333;
+}
+
+.ml-2 {
+    margin-left: 10px;
+    /* Adjust margin between checkbox and text */
+}
+
+.landing-main {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.boldHeading {
+    font-weight: bold;
+}
+
+.accordion-button {
+    background-color: transparent;
+    /* Background when inactive */
+    color: black;
+    /* Default text color */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: red;
+    /* Active background color */
+    color: black;
+    /* Active text color */
+}
+
+.accordion-body {
+    color: black;
+    /* Body text color */
+}

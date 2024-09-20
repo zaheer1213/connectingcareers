@@ -57,6 +57,7 @@ const Navbar = () => {
   };
   return (
     <>
+      {/* // nav bar page */}
       <Container fluid>
         <Row className="py-3 align-items-center">
           <Col xs={3} md={2} className="d-flex justify-content-start">
@@ -99,7 +100,6 @@ const Navbar = () => {
           </Col>
         </Row>
       </Container>
-
       {/* pop model  */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

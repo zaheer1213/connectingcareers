@@ -129,6 +129,9 @@
     .custom-btn{
         width: auto !important;
     }
+    .content{
+        min-height: auto;
+    }
 }
 
 @media (max-width: 768px) {

@@ -14,6 +14,7 @@ import ContactUs from "./Admin/ContactUs/ContactUs";
 import AdminBlogs from "./Admin/Blogs/Blogs";
 import Auth from "./Admin/Auth";
 import Addblogs from "./Admin/Blogs/Addblogs";
+import Landing from "./Landing";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/PerticularBlogs" element={<PerticularBlogs />} />
         <Route path="/admin-login" element={<Auth />} />
+        <Route path="/landing" element={<Landing />} />
 
         {/* Admin Pages */}
         <Route element={<AdminLayout />}>

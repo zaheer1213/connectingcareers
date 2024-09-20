@@ -60,6 +60,10 @@
     object-fit: contain;
 }
 
+.marginleft {
+    margin-left: 100px;
+}
+
 @media (max-width: 768px) {
     .frame-wrapper {
         padding: 0 10px;
@@ -70,6 +74,9 @@
         /* Adjusted width for smaller screens */
         height: 80px;
         /* Adjusted height for smaller screens */
+    }
+    .marginleft{
+        margin-left: 0px;
     }
 }
 

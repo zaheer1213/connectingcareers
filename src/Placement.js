@@ -76,10 +76,7 @@ const Placement = () => {
                   src="/convex.jpeg"
                 />
               </div>
-              <div
-                className="esy-ev-social-media-2-wrapper"
-                style={{ marginLeft: "100px" }}
-              >
+              <div className="esy-ev-social-media-2-wrapper marginleft">
                 <img className="image-17-icon" alt="" src="/image-17@2x.png" />
               </div>
             </Row>

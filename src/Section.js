@@ -36,11 +36,7 @@ const Section = ({
                   href="https://wa.me/9822666114?text=Hello, I'm interested."
                   target="_blank"
                 >
-                  <Button
-                    className="btn custom-btn"
-                  >
-                    Apply Now
-                  </Button>
+                  <Button className="btn custom-btn">Apply Now</Button>
                 </a>
               </div>
             </div>
@@ -104,7 +100,7 @@ const Section = ({
                     onClick={() => scrollToSection(reviewsRef)}
                   >
                     <div className="button-base">
-                      <div className="text">Placement Partners</div>
+                      <div className="text">Testimonial</div>
                     </div>
                   </div>
                 </div>

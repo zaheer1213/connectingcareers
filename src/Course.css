@@ -153,11 +153,6 @@
     /* Show the image on hover */
 }
 
-@media (max-width: 767.98px) {
-    .course-card {
-        height: 460px !important;
-    }
-}
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -196,4 +191,14 @@
     left: 43%;
     bottom: 0;
     overflow: hidden;
+}
+
+@media (max-width: 767.98px) {
+    .course-card {
+        height: 460px !important;
+    }
+
+    .button-container {
+        left: 29%;
+    }
 }
