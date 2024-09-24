@@ -42,7 +42,7 @@
     border-radius: 20px;
     margin-bottom: 20px;
     /* Add some space between cards */
-    text-align: center;
+    text-align: start;
 
 }
 
@@ -69,13 +69,17 @@
     border: 2px solid black;
     border-radius: 10px;
     margin: 10px;
-    font-size: 25px;
+    font-size: 16px;
     font-weight: bold;
+}
+.timer span{
+    font-size: 30px;
+    padding: 10px;
+    margin-top: 20px;
 }
 
 .career-container {
-    background-color: black;
-    color: white;
+    color: black;
 }
 
 .career-box {
@@ -137,4 +141,9 @@
 .accordion-body {
     color: black;
     /* Body text color */
+}
+
+/* F8F9FA */
+.bg-second {
+    background: #F8F9FA;
 }

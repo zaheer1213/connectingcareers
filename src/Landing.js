@@ -9,8 +9,10 @@ import {
   faUserTie,
 } from "@fortawesome/free-solid-svg-icons";
 import Accordion from "react-bootstrap/Accordion";
+import { useNavigate } from "react-router-dom";
 
 const Landing = () => {
+  const navigate = useNavigate();
   const [time, setTime] = useState(15 * 60); // 15 minutes in seconds
 
   useEffect(() => {
@@ -79,17 +81,22 @@ const Landing = () => {
                 </Col>
                 <Col md={8}>
                   <Row>
+                    <div className="text-center mb-3">
+                      <h2 className="text-white" style={{ fontWeight: "bold" }}>
+                        For Whom
+                      </h2>
+                    </div>
                     <Col>
                       <div className="feautrescar">
                         <FontAwesomeIcon icon={faUserGraduate} />
-                        &nbsp; Graduates
+                        &nbsp; &nbsp; Graduates
                       </div>
                     </Col>
 
                     <Col>
                       <div className="feautrescar">
                         <FontAwesomeIcon icon={faBusinessTime} />
-                        &nbsp; Business Owners
+                        &nbsp; &nbsp; Business Owners
                       </div>
                     </Col>
                   </Row>
@@ -97,25 +104,28 @@ const Landing = () => {
                     <Col>
                       <div className="feautrescar">
                         <FontAwesomeIcon icon={faPerson} />
-                        &nbsp; Housewives with Career Aspirations
+                        &nbsp; &nbsp; Housewives with Career Aspirations
                       </div>
                     </Col>
                     <Col>
                       <div className="feautrescar">
                         <FontAwesomeIcon icon={faUserTie} />
-                        &nbsp; Confuse working professionals
+                        &nbsp; &nbsp; Confuse working professionals
                       </div>
                     </Col>
                   </Row>
                   <Row>
                     <div className="text-center">
-                      <Button className="btn custom-btn">
+                      <Button
+                        className="btn custom-btn"
+                        onClick={() => navigate("/paymentPage")}
+                      >
                         ENROL NOW ₹ 199
                       </Button>
                     </div>
                   </Row>
-                  <Row className="mt-3 text-center">
-                    <h5 className="text-white">
+                  <Row className="mt-3 text-center text-white">
+                    <h5 className="">
                       Only for those who are SERIOUS about career
                     </h5>
                   </Row>
@@ -127,7 +137,7 @@ const Landing = () => {
                       <Row>
                         <Col className="col-box column">
                           <div className="timer text-center">
-                            {formatTime(time)} <br /> Min : Sec
+                            <span> {formatTime(time)}</span> <br /> Min : Sec
                           </div>
                         </Col>
                       </Row>
@@ -138,6 +148,8 @@ const Landing = () => {
             </Container>
           </Row>
         </Container>
+      </div>
+      <div>
         <Container className="career-container py-5">
           <h1 className="mb-5">
             Check all the <span className="text-danger">answers</span> where
@@ -161,7 +173,12 @@ const Landing = () => {
               career transforming session is for you{" "}
             </h5>
             <div className="text-center mt-3">
-              <Button className="btn custom-btn">ENROL NOW ₹ 199</Button>
+              <Button
+                className="btn custom-btn"
+                onClick={() => navigate("/paymentPage")}
+              >
+                ENROL NOW ₹ 199
+              </Button>
             </div>
           </Row>
           <Row>
@@ -172,213 +189,126 @@ const Landing = () => {
               <Row>
                 <Col className="col-box column">
                   <div className="timer text-center text-dark">
-                    {formatTime(time)} <br /> Min : Sec
+                    <span> {formatTime(time)}</span> <br /> Min : Sec
                   </div>
                 </Col>
               </Row>
             </Container>
           </Row>
         </Container>
-        <Container>
-          <Row className="align-items-center">
-            <Row className="d-flex justify-content-center align-items-center">
+        <Container className="mt-5">
+          <Row className="d-flex justify-content-center align-items-center">
+            <h1 className="text-center mb-5">
+              Brand <span className="text-danger">Yourself</span>, Build Your{" "}
+              <span className="text-danger">Future</span> : A Practical Guide to
+              Personal <span className="text-danger">Branding</span>
+            </h1>
+            <Col lg={6}>
               <div className="w-100 h-100 text-center">
                 <img
-                  src="/ebook.jpg"
+                  src="/E Book.png"
                   alt="images"
                   className="img-fluid"
                   style={{
-                    width: "70%",
-                    height: "70%",
+                    width: "80%",
+                    height: "80%",
                     objectFit: "cover",
                     borderRadius: "50px",
                   }}
                 />
               </div>
-            </Row>
-            <Row className="d-flex justify-content-center align-items-center mt-5">
-              <div className="text-center text-white">
-                <h1>
-                  Brand <span className="text-danger">Yourself</span>, Build
-                  Your <span className="text-danger">Future</span> : A Practical
-                  Guide to Personal{" "}
-                  <span className="text-danger">Branding</span>
-                </h1>
-                <Row className="mt-5">
+            </Col>
+            <Col lg={6}>
+              <h2 className="boldHeading">E-Book :</h2>
+              <div className="text-center">
+                <Row className="mt-3">
                   <Col lg={6}>
-                    <div className="text-start mb-5">
-                      <h4 className="boldHeading">Self-Discovery:</h4>
-                      <ul>
-                        <li>
-                          Understand your passions, values, and strengths.
-                        </li>
-                        <li>
-                          Reflect on your unique experiences and qualities.
-                        </li>
-                      </ul>
+                    <div className="text-start mb-3">
+                      <h5 className="">
+                        <li>Self-Discovery</li>
+                      </h5>
                     </div>
                   </Col>
                   <Col lg={6}>
                     <div className="text-start mb-3">
-                      <h4 className="boldHeading">Define Your Niche:</h4>
-                      <ul>
-                        <li>Identify your area of expertise or interest.</li>
-                        <li>Research the market demand for your niche.</li>
-                      </ul>
+                      <h5 className="">
+                        <li>Define Your Niche</li>
+                      </h5>
                     </div>
                   </Col>
+
                   <Col lg={6}>
-                    <div className="text-start mb-5">
-                      <h4 className="boldHeading">
-                        Create a Compelling Personal Brand Story:
-                      </h4>
-                      <ul>
-                        <li>
-                          Develop a narrative that showcases your journey,
-                          values, and unique selling points.
-                        </li>
-                        <li>
-                          Craft a compelling message that resonates with your
-                          target audience.
-                        </li>
-                      </ul>
+                    <div className="text-start mb-3">
+                      <h5 className="">
+                        <li>Develop Your Expertise</li>
+                      </h5>
                     </div>
                   </Col>
                   <Col lg={6}>
                     <div className="text-start mb-3">
-                      <h4 className="boldHeading">
-                        Build a Strong Online Presence:
-                      </h4>
-                      <ul>
-                        <li>Establish a professional website or blog.</li>
-                        <li>
-                          Leverage social media platforms to connect with your
-                          audience.
-                        </li>
-                        <li>
-                          Optimism your online content for search engines.
-                        </li>
-                      </ul>
-                    </div>
-                  </Col>
-                  <Col lg={6}>
-                    <div className="text-start mb-5">
-                      <h4 className="boldHeading">Develop Your Expertise:</h4>
-                      <ul>
-                        <li>Continuously learn and acquire new skills.</li>
-                        <li>
-                          Stay updated on industry trends and developments
-                        </li>
-                        <li>
-                          Share your knowledge through articles, blog posts, or
-                          speaking engagements.
-                        </li>
-                      </ul>
+                      <h5 className="">
+                        <li>Network Effectively</li>
+                      </h5>
                     </div>
                   </Col>
                   <Col lg={6}>
                     <div className="text-start mb-3">
-                      <h4 className="boldHeading">Network Effectively:</h4>
-                      <ul>
-                        <li>
-                          Build relationships with industry professionals and
-                          potential clients.
-                        </li>
-                        <li>
-                          Attend conferences, workshops, and networking events.
-                        </li>
-                        <li>Leverage online networking platforms.</li>
-                      </ul>
-                    </div>
-                  </Col>
-                  <Col lg={6}>
-                    <div className="text-start mb-5">
-                      <h4 className="boldHeading">
-                        Create High-Quality Content:
-                      </h4>
-                      <ul>
-                        <li>
-                          Produce valuable and informative content that
-                          addresses your audience's needs.
-                        </li>
-                        <li>
-                          Use visuals, such as infographic or videos, to enhance
-                          your content.
-                        </li>
-                        <li>
-                          Share your content on social media and other relevant
-                          platforms.
-                        </li>
-                      </ul>
+                      <h5 className="">
+                        <li>Create High-Quality Content</li>
+                      </h5>
                     </div>
                   </Col>
                   <Col lg={6}>
                     <div className="text-start mb-3">
-                      <h4 className="boldHeading">
-                        Build Trust and Credibility:
-                      </h4>
-                      <ul>
-                        <li>
-                          Demonstrate your expertise through case studies,
-                          testimonials, and certifications.
-                        </li>
-                        <li>
-                          Be authentic and transparent in your communication.
-                        </li>
-                        <li>
-                          Establish yourself as a thought leader in your field.
-                        </li>
-                      </ul>
-                    </div>
-                  </Col>
-                  <Col lg={6}>
-                    <div className="text-start mb-5">
-                      <h4 className="boldHeading">
-                        Leverage Your Unique Selling Proposition (USP):
-                      </h4>
-                      <ul>
-                        <li>
-                          Identify what sets you apart from your competitors.
-                        </li>
-                        <li>
-                          Clearly communicate your USP to your target audience.
-                        </li>
-                      </ul>
+                      <h5 className="">
+                        <li>Build Trust and Credibility</li>
+                      </h5>
                     </div>
                   </Col>
                   <Col lg={6}>
                     <div className="text-start mb-3">
-                      <h4 className="boldHeading">
-                        Measure and Analyst Your Progress:
-                      </h4>
-                      <ul>
-                        <li>
-                          Track your online metrics, such as website traffic and
-                          social media engagement.
-                        </li>
-                        <li>
-                          Use analytics tools to identify areas for improvement.
-                        </li>
-                        <li>
-                          Continuously refine your brand strategy based on your
-                          findings.
-                        </li>
-                      </ul>
+                      <h5 className="">
+                        <li> Create a Compelling Personal Brand Story</li>
+                      </h5>
+                    </div>
+                  </Col>
+                  <Col lg={6}>
+                    <div className="text-start mb-3">
+                      <h5 className="">
+                        <li>Build a Strong Online Presence</li>
+                      </h5>
+                    </div>
+                  </Col>
+                  <Col lg={6}>
+                    <div className="text-start mb-5">
+                      <h5 className="">
+                        <li> Leverage Your Unique Selling Proposition (USP)</li>
+                      </h5>
+                    </div>
+                  </Col>
+                  <Col lg={6}>
+                    <div className="text-start mb-3">
+                      <h5 className="">
+                        <li>Measure and Analyst Your Progress</li>
+                      </h5>
                     </div>
                   </Col>
                 </Row>
               </div>
-            </Row>
+            </Col>
           </Row>
           <Row className="mt-5">
             <div className="text-center">
-              <Button className="btn custom-btn">ENROL NOW ₹ 199</Button>
+              <Button
+                className="btn custom-btn"
+                onClick={() => navigate("/paymentPage")}
+              >
+                ENROL NOW ₹ 199
+              </Button>
             </div>
           </Row>
           <Row className="mt-3 text-center">
-            <h5 className="text-white">
-              Only for those who are SERIOUS about career
-            </h5>
+            <h5 className="">Only for those who are SERIOUS about career</h5>
           </Row>
           <Row>
             <Container
@@ -388,14 +318,15 @@ const Landing = () => {
               <Row>
                 <Col className="col-box column">
                   <div className="timer text-center">
-                    {formatTime(time)} <br /> Min : Sec
+                    <span className="mt-3">{formatTime(time)}</span> <br />{" "}
+                    <p>Min : Sec</p>
                   </div>
                 </Col>
               </Row>
             </Container>
           </Row>
         </Container>
-        <Container className="mb-5">
+        <Container fluid className="mb-5  bg-second">
           <Row>
             <Col md={6} className="director-image-column">
               <img
@@ -406,16 +337,16 @@ const Landing = () => {
             </Col>
             <Col md={6} className="director-info-column">
               <div className="director-info">
-                <h2 className="director-heading text-white">
-                  Meet the Brand Man
+                <h2 className="director-heading ">
+                  Meet the <span className="text-danger">Brand Man</span>
                 </h2>
-                <p className="text-white">
+                <p className="">
                   Hi, I am Immi Inamdar with 17 years of versatile experience in
                   Brand Building and Marketing. I have been committed to
                   creating more than 200 individual + company brands. I have
                   worked in countries like the UK, USA, Dubai, India.
                 </p>
-                <div className="text-white mt-5">
+                <div className=" mt-5">
                   <strong>Mr. Immi Inamdar</strong>
                   <p>Bsc., PGDBM, MBA, MS, M.Phil, LLB</p>
                 </div>
@@ -423,9 +354,9 @@ const Landing = () => {
             </Col>
           </Row>
         </Container>
-        <Container className="mt-5 text-white">
+        <Container className="mt-5 ">
           <Row>
-            <h1 className="text-center mb-5">What you will get</h1>
+            <h1 className="text-center mb-5 boldHeading">What you will get</h1>
             <Col>
               <div className="mb-3">
                 <h5>
@@ -483,7 +414,7 @@ const Landing = () => {
           </Row>
         </Container>
         <Container className="mt-5 py-5 w-100">
-          <h1 className="text-white mb-5">
+          <h1 className=" mb-5">
             <span className="text-danger">Frequently</span> Asked Questions
           </h1>
           <Accordion defaultActiveKey="0" className="w-100">
@@ -516,13 +447,16 @@ const Landing = () => {
           </Accordion>
           <Row className="mt-5">
             <div className="text-center">
-              <Button className="btn custom-btn">ENROL NOW ₹ 199</Button>
+              <Button
+                className="btn custom-btn"
+                onClick={() => navigate("/paymentPage")}
+              >
+                ENROL NOW ₹ 199
+              </Button>
             </div>
           </Row>
           <Row className="mt-3 text-center">
-            <h5 className="text-white">
-              Only for those who are SERIOUS about career
-            </h5>
+            <h5 className="">Only for those who are SERIOUS about career</h5>
           </Row>
           <Row>
             <Container
@@ -532,7 +466,7 @@ const Landing = () => {
               <Row>
                 <Col className="col-box column">
                   <div className="timer text-center">
-                    {formatTime(time)} <br /> Min : Sec
+                    <span> {formatTime(time)}</span> <br /> Min : Sec
                   </div>
                 </Col>
               </Row>

@@ -15,6 +15,7 @@ import AdminBlogs from "./Admin/Blogs/Blogs";
 import Auth from "./Admin/Auth";
 import Addblogs from "./Admin/Blogs/Addblogs";
 import Landing from "./Landing";
+import PaymentPage from "./PaymentPage";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path="/PerticularBlogs" element={<PerticularBlogs />} />
         <Route path="/admin-login" element={<Auth />} />
         <Route path="/landing" element={<Landing />} />
+        <Route path="/paymentPage" element={<PaymentPage />} />
 
         {/* Admin Pages */}
         <Route element={<AdminLayout />}>
