@@ -10,6 +10,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Accordion from "react-bootstrap/Accordion";
 import { useNavigate } from "react-router-dom";
+import Section from "./Section";
+import Footer from "./Footer";
 
 const Landing = () => {
   const navigate = useNavigate();
@@ -40,10 +42,12 @@ const Landing = () => {
     "As a retired person, interested in sharing experiences with others.",
     "As a housewife, I want to establish a personal identity beyond domestic responsibilities.",
   ];
+  console.log("first");
+
   return (
     <>
-      <div className="bg-dark">
-        <div className="logo-img ">
+      <div className="bg-dark ">
+        <div className="logo-img">
           <img
             className=""
             alt="logo"
@@ -62,7 +66,7 @@ const Landing = () => {
                   your
                   <span className="text-danger"> market value</span>
                 </h1>
-                <h5 className="mt-5">
+                <h5 className="mt-3">
                   From the one who has created more than 200 individual and
                   company brands.
                 </h5>
@@ -83,7 +87,8 @@ const Landing = () => {
                   <Row>
                     <div className="text-center mb-3">
                       <h2 className="text-white" style={{ fontWeight: "bold" }}>
-                        For Whom
+                        FO<span className="text-danger">R</span> WH
+                        <span className="text-danger">O</span>
                       </h2>
                     </div>
                     <Col>
@@ -474,6 +479,8 @@ const Landing = () => {
           </Row>
         </Container>
       </div>
+      <Section />
+      <Footer />
     </>
   );
 };

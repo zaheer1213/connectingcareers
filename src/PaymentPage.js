@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./PaymentPage.css";
+import axios from "axios";
+import { BASEURL } from "./Comman";
 
 const PaymentPage = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [errors, setErrors] = useState({});
@@ -11,6 +14,11 @@ const PaymentPage = () => {
   const validateForm = () => {
     const formErrors = {};
     let isValid = true;
+
+    if (!name) {
+      formErrors.name = "Name is required.";
+      isValid = false;
+    }
 
     // Email validation
     if (!email) {
@@ -34,12 +42,33 @@ const PaymentPage = () => {
     return isValid;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (validateForm()) {
-      // Hide the form and show the QR code and UPI details
-      setIsFormSubmitted(true);
+    if (!validateForm()) {
+      return;
+    }
+    try {
+      const payload = {
+        name: name,
+        whatsapp_no: whatsapp,
+        receipt: null,
+        amount: 199,
+        email: email,
+        transaction_id: "",
+        payment_type: "UPI",
+      };
+      const response = await axios.post(
+        `${BASEURL}/courses/book-seminar`,
+        payload
+      );
+      if (response.data) {
+        const redirectUrl = response.data.pay_page_url;
+        window.location.href = redirectUrl;
+      }
+      // setIsFormSubmitted(true);
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -47,12 +76,16 @@ const PaymentPage = () => {
     setReceipt(e.target.files[0]);
   };
 
-  const handleFinalSubmit = (e) => {
+  const handleFinalSubmit = async (e) => {
     e.preventDefault();
     if (receipt) {
-      // Implement receipt upload logic here (e.g., send to API)
+      const data = new FormData();
+      data.append("email", email);
+      data.append("whatsappno", whatsapp);
+      data.append("receipt", receipt);
+
+      // const response = await axios.post(`${BASEURL}/`, data);
       alert("Receipt uploaded successfully.");
-      // Reset form after submission
       setIsFormSubmitted(false);
       setEmail("");
       setWhatsapp("");
@@ -62,7 +95,7 @@ const PaymentPage = () => {
     }
   };
   return (
-    <div className="payment-page">
+    <div className="payment-page ">
       <div className="container">
         {/* Header Section */}
         <header className="header">
@@ -125,6 +158,18 @@ const PaymentPage = () => {
                 <label htmlFor="amount">Amount</label>
                 <input type="text" id="amount" value="₹199.00" readOnly />
 
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter your name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+                {errors.name && (
+                  <span className="error-text">{errors.name}</span>
+                )}
+
                 {/* Email field */}
                 <label htmlFor="email">Email ID</label>
                 <input
@@ -146,7 +191,6 @@ const PaymentPage = () => {
                   placeholder="Enter your WhatsApp number"
                   value={whatsapp}
                   onChange={(e) => setWhatsapp(e.target.value)}
-                  max={10}
                 />
                 {errors.whatsapp && (
                   <span className="error-text">{errors.whatsapp}</span>
@@ -164,12 +208,12 @@ const PaymentPage = () => {
                 alt="QR Code"
                 className="qr-code"
               />
-              <p>
+              {/* <p>
                 Or pay via UPI ID: <strong>sifsayed@oksbi</strong>
-              </p>
+              </p> */}
               <form
                 onSubmit={handleFinalSubmit}
-                className="receipt-upload-form"
+                className="receipt-upload-form mt-3"
               >
                 <label htmlFor="receipt">
                   Upload Payment Receipt or Invoice

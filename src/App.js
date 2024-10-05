@@ -16,6 +16,10 @@ import Auth from "./Admin/Auth";
 import Addblogs from "./Admin/Blogs/Addblogs";
 import Landing from "./Landing";
 import PaymentPage from "./PaymentPage";
+import Privacypolicy from "./Privacypolicy";
+import RefundPolicy from "./RefundPolicy";
+import Termsconditions from "./Termsconditions";
+import PaymentSuccess from "./PaymentSuccess";
 
 function App() {
   return (
@@ -39,8 +43,12 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/PerticularBlogs" element={<PerticularBlogs />} />
         <Route path="/admin-login" element={<Auth />} />
-        <Route path="/landing" element={<Landing />} />
+        <Route path="/learning" element={<Landing />} />
         <Route path="/paymentPage" element={<PaymentPage />} />
+        <Route path="/privacy-policy" element={<Privacypolicy />} />
+        <Route path="/refund-policy" element={<RefundPolicy />} />
+        <Route path="/termsconditions" element={<Termsconditions />} />
+        <Route path="/paymentSuccess" element={<PaymentSuccess />} />
 
         {/* Admin Pages */}
         <Route element={<AdminLayout />}>

@@ -8,7 +8,8 @@ const Footer = () => {
         <div className="container1">
           <div className="content3">
             <div className="footer-text">
-              © 2024 Connecting Dots. All rights reserved.
+              © 2024 Connect and Discover Business Solutions Pvt. Ltd. All
+              rights reserved.
             </div>
             <div className="social-icons">
               <a href="https://www.linkedin.com/feed/update/urn:li:activity:7229447412774260736/?actorCompanyId=104370310">

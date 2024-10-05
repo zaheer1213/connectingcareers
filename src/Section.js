@@ -1,6 +1,7 @@
 import React from "react";
 import "./Section.css";
 import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Section = ({
   heroRef,
@@ -12,8 +13,10 @@ const Section = ({
   sectionRef,
 }) => {
   const scrollToSection = (ref) => {
-    ref.current.scrollIntoView({ behavior: "smooth" });
+    ref?.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const navigate = useNavigate();
 
   return (
     <div className="section">
@@ -111,6 +114,52 @@ const Section = ({
                   >
                     <div className="button-base">
                       <div className="text">Course Details</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="footer-links-column">
+              <div className="heading" style={{ color: "gray" }}>
+                Legal
+              </div>
+              <div className="footer-links">
+                <div className="footer-link">
+                  <div
+                    className="button1"
+                    onClick={() => {
+                      navigate("/privacy-policy");
+                      window.scroll(0, 0);
+                    }}
+                  >
+                    <div className="button-base">
+                      <div className="text">Privacy Policy</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="footer-link">
+                  <div
+                    className="button1"
+                    onClick={() => {
+                      navigate("/refund-policy");
+                      window.scroll(0, 0);
+                    }}
+                  >
+                    <div className="button-base">
+                      <div className="text">Refund Policy</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="footer-link">
+                  <div
+                    className="button1"
+                    onClick={() => {
+                      navigate("/termsconditions");
+                      window.scroll(0, 0);
+                    }}
+                  >
+                    <div className="button-base">
+                      <div className="text">Terms & Conditions</div>
                     </div>
                   </div>
                 </div>
